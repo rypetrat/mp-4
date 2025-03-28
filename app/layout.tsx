@@ -1,6 +1,7 @@
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,16 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({children, }: Readonly<{children:React.ReactNode}>) {
+export default function RootLayout({children}: Readonly<{children:React.ReactNode}>) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
-        <link rel="icon" type="image" href="/stock.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8"/>
+        <link rel="icon" type="image" href="/stock.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>CS391 | MP-4</title>
       </head>
       <body>
+        <Header />
         {children}
       </body>
     </html>
