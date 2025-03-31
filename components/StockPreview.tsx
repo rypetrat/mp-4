@@ -1,28 +1,46 @@
 import { StockProps } from "@/types";
+import styled from "styled-components";
+
+const StyledTable = styled.table`
+  border-collapse: separate;
+  border-spacing: 15px 0;
+  background-color: #005bb5;
+  color: white;
+`;
+
+const StyledTh = styled.th`
+  color: black;
+`;
+
+const StyledTd = styled.td`
+  padding: 10px;
+  text-align: center;
+`;
+
 
 export default function StockPreview({stock}: {stock: StockProps}) {
   return (
-    <>
-        <table>
+    <div style={{ marginTop: "50px", display: "flex", justifyContent: "center", padding: "0.25%" }}>
+        <StyledTable>
             <thead>
-            <tr>
-                <th>Date</th>
-                <th>Open</th>
-                <th>High</th>
-                <th>Low</th>
-                <th>Close</th>
-            </tr>
+              <tr>
+                <StyledTh>Date</StyledTh>
+                <StyledTh>Open</StyledTh>
+                <StyledTh>High</StyledTh>
+                <StyledTh>Low</StyledTh>
+                <StyledTh>Close</StyledTh>
+              </tr>
             </thead>
             <tbody>
-            <tr key={stock.date}>
-                <td>{new Date(stock.date).toLocaleDateString()}</td>
-                <td>{stock.open.toFixed(2)}</td>
-                <td>{stock.high.toFixed(2)}</td>
-                <td>{stock.low.toFixed(2)}</td>
-                <td>{stock.close.toFixed(2)}</td>
-            </tr>
+              <tr key={stock.date}>
+                <StyledTd>{new Date(stock.date).toLocaleDateString()}</StyledTd>
+                <StyledTd>{stock.open.toFixed(2)}</StyledTd>
+                <StyledTd>{stock.high.toFixed(2)}</StyledTd>
+                <StyledTd>{stock.low.toFixed(2)}</StyledTd>
+                <StyledTd>{stock.close.toFixed(2)}</StyledTd>
+              </tr>
             </tbody>
-        </table>
-    </>
+        </StyledTable>
+    </div>
   );
 }

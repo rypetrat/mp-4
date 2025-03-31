@@ -9,7 +9,6 @@ export default function StockDisplay({inputStock}: {inputStock: StockProps[]}) {
 
   return (
     <div>
-      
       {stocks.map((stock) => (
         <StockPreview key={stock.date} stock={stock} />
       ))}
