@@ -3,7 +3,7 @@ import { StockProps } from '@/types';
 
 export default async function getStockData(symbol: string): Promise<StockProps[]> {
     const API_KEY = process.env.API_KEY;
-    const API_URL = `https://api.marketstack.com/v2/eod?access_key=${API_KEY}&symbols=${symbol}&limit=7`;
+    const API_URL = `https://api.marketstack.com/v2/eod?access_key=${API_KEY}&symbols=${symbol}&limit=30`;
     const response = await fetch(API_URL);
     
     if (!response.ok) {

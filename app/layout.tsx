@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import { Geist } from "next/font/google";
 import Header from "@/components/Header";
 import styled from "styled-components";
+import { Geist } from "next/font/google";
+import { StockProvider } from "./StockContext";
 
 const geist = Geist({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({children}: Readonly<{children:React.ReactNod
       </head>
       <StyledBody>
         <Header />
-        {children}
+        <StockProvider>{children}</StockProvider>
       </StyledBody>
     </html>
   );
