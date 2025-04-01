@@ -28,7 +28,7 @@ const StyledButton = styled.button`
 
 export default function Home() {
   const [symbol, setSymbol] = useState("");
-  const { stockData, setStockData } = useStock();
+  const { setStockData } = useStock();
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
