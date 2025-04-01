@@ -47,8 +47,8 @@ export default function Home() {
       <div style={{backgroundColor: "#005bb5", marginBottom: "50px", padding: "2%", paddingBottom: "3%", margin: "0 auto", width: "30%", borderRadius: "6px", border: "3px solid #000000", color: "white", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)"}}>
         <h1>Historical 30 Day Stock Data</h1>
         <form onSubmit={handleSubmit}>
-            <StyledInput type="text" value={symbol} onChange={(e) => setSymbol(e.target.value)} placeholder="Stock Symbol" required/>
-            <StyledButton type="submit">Get Stock Data</StyledButton>
+          <StyledInput type="text" value={symbol} onChange={(e) => setSymbol(e.target.value)} placeholder="Stock Symbol" required/>
+          <StyledButton type="submit">Get Stock Data</StyledButton>
         </form>
       </div>
     </div>
