@@ -6,6 +6,8 @@ const StyledTable = styled.table`
   border-spacing: 40px 0;
   background-color: #005bb5;
   color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 `;
 
 const StyledTh = styled.th`
